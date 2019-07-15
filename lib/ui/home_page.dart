@@ -128,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 15.0),
                   SizedBox(
                     width: double.infinity,
-                    height: 60,
+                    height: 70,
                     // height: double.infinity,
                     child: RaisedButton.icon(
                       onPressed: () {},
@@ -177,7 +177,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 15.0),
                   SizedBox(
                     width: double.infinity,
-                    height: 60,
+                    height: 70,
                     // height: double.infinity,
                     child: RaisedButton.icon(
                       onPressed: () {},
@@ -196,7 +196,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 15.0),
                   SizedBox(
                     width: double.infinity,
-                    height: 60,
+                    height: 70,
                     // height: double.infinity,
                     child: RaisedButton.icon(
                       onPressed: () {},
@@ -212,6 +212,7 @@ class _HomePageState extends State<HomePage> {
                       icon: Icon(Icons.error, color: Colors.white),
                     ),
                   ),
+                  SizedBox(height: 55.0),
                   Text(
                     "VERSION 1.6.8",
                     style: TextStyle(fontSize: 16, color: Colors.white),
