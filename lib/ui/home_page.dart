@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final double deviceWidth = MediaQuery.of(context).size.width;
-    final double targetWidth = deviceWidth > 550.0 ? 500.0 : deviceWidth * 0.95;
+    final double targetWidth = deviceWidth > 550.0 ? 420.0 : deviceWidth * 0.95;
 
     return Scaffold(
       body: Container(
@@ -98,13 +98,8 @@ class _HomePageState extends State<HomePage> {
             child: Container(
               width: targetWidth,
               child: Column(
-                // crossAxisAlignment: CrossAxisAlignment.center,
-                // mainAxisAlignment: MainAxisAlignment.center,
-
                 crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.end,
-
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(
                     height: 155.0,
@@ -113,12 +108,12 @@ class _HomePageState extends State<HomePage> {
                       fit: BoxFit.contain,
                     ),
                   ),
-                  SizedBox(height: 40.0),
+                  SizedBox(height: 30.0),
                   Text(
                     'LOGIN',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 50.0,
+                        fontSize: 55.0,
                         color: Colors.white),
                   ),
                   SizedBox(height: 20.0),
@@ -148,29 +143,40 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   SizedBox(height: 5.0),
-                  FlatButton.icon(
-                    onPressed: () {},
-                    label: Text(
-                      "Forgot your passwor?",
-                      style: TextStyle(
-                          // fontWeight: FontWeight.w200,
-                          fontSize: 20,
-                          color: Colors.white),
-                    ),
-                    icon: Icon(Icons.error, color: Colors.white),
+                  Row(
+                    textDirection: TextDirection.ltr,
+                    children: <Widget>[
+                      FlatButton.icon(
+                        padding: 0,
+                        onPressed: () {},
+                        label: Text(
+                          "Forgot your passwor?",
+                          style: TextStyle(
+                              // fontWeight: FontWeight.w200,
+                              fontSize: 16,
+                              color: Colors.white),
+                        ),
+                        icon: Icon(
+                          Icons.error,
+                          color: Colors.white,
+                          size: 34,
+                        ),
+                      ),
+                    ],
                   ),
-                  SizedBox(height: 25.0),
+                  SizedBox(height: 20.0),
                   Divider(
                     color: Colors.white,
-                    height: 36,
+                    height: 1,
                   ),
+                  SizedBox(height: 50.0),
                   SizedBox(
-                    height: 65.0,
+                    height: 45.0,
                     child: Text(
                       'New to Stori?',
                       style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 36,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 28,
                           color: Colors.white),
                     ),
                   ),
