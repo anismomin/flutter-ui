@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'widgets/stori_icon_button.dart';
 
-class HomePage extends StatefulWidget {
-  HomePage({Key key, this.title}) : super(key: key);
+class ActionPage extends StatefulWidget {
+  ActionPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _ActionPageState createState() => _ActionPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _ActionPageState extends State<ActionPage> {
   final Map<String, dynamic> _formData = {'email': null, 'password': null};
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _passwordFieldController =
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
         hintStyle: TextStyle(fontSize: 20.0, color: Colors.white),
         hasFloatingPlaceholder: false,
         suffixIcon: Icon(
-          Icons.account_circle,
+          Icons.email,
           color: Colors.white,
           size: 30.0,
         ),
@@ -124,10 +124,9 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 15.0),
                   StoriIconButton(
                       text: "LOAD EXPERIENCE",
-                      icon: Icons.exit_to_app,
+                      icon: Icons.error,
                       backgroundColor: Colors.green,
                       onPressed: () {}),
-                  SizedBox(height: 5.0),
                   Row(
                     textDirection: TextDirection.ltr,
                     children: <Widget>[
@@ -141,9 +140,9 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.white),
                         ),
                         icon: Icon(
-                          Icons.help_outline,
+                          Icons.error,
                           color: Colors.white,
-                          size: 36,
+                          size: 34,
                         ),
                       ),
                     ],
@@ -167,28 +166,16 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 15.0),
                   StoriIconButton(
                       text: "SIGN UP NOW",
-                      icon: Icons.exit_to_app,
+                      icon: Icons.error,
                       backgroundColor: Colors.blueAccent,
                       onPressed: () {}),
                   SizedBox(height: 15.0),
                   StoriIconButton(
                       text: "GETTING STARTED",
-                      icon: Icons.description,
+                      icon: Icons.error,
                       backgroundColor: Colors.orange,
                       onPressed: () {}),
                   SizedBox(height: 55.0),
-                   new Positioned(
-                    //constraints.biggest.height to get the height 
-                    // * .05 to put the position top: 5%
-                    bottom: 10.0,
-                    // left: constraints.biggest.width * .30,
-                    child: new Container(
-                              width: 100.0,
-                              height: 80.0,
-                              decoration: new BoxDecoration(color: Colors.red),
-                              child: new Text('hello'),
-                          ),
-                    ),
                   Text(
                     "VERSION 1.6.8",
                     style: TextStyle(fontSize: 16, color: Colors.white),
