@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
-      // home: ActionPage(),
+      // home: HomePage(),
+      home: ActionPage(),
     );
   }
 }

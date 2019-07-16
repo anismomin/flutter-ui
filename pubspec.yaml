@@ -48,6 +48,9 @@ flutter:
    - assets/images/defaultBg@2x.jpg
    - assets/images/logoText.png
    - assets/images/logoText@2x.png
+   - assets/images/powerby-halocam.png
+   - assets/images/powerby-halocam@2x.png
+   
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

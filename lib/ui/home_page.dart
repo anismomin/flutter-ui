@@ -94,110 +94,105 @@ class _HomePageState extends State<HomePage> {
           image: _buildBackgroundImage(),
         ),
         padding: EdgeInsets.all(10.0),
-        child: Center(
-          child: SingleChildScrollView(
-            child: Container(
-              width: targetWidth,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  SizedBox(
-                    height: 155.0,
-                    child: Image.asset(
-                      "assets/images/storicam_logo@2x.png",
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                  SizedBox(height: 30.0),
-                  Text(
-                    'LOGIN',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 55.0,
-                        color: Colors.white),
-                  ),
-                  SizedBox(height: 20.0),
-                  _buildEmailTextField(),
-                  SizedBox(height: 10.0),
-                  _buildPasswordTextField(),
-                  SizedBox(height: 15.0),
-                  StoriIconButton(
-                      text: "LOAD EXPERIENCE",
-                      icon: Icons.exit_to_app,
-                      backgroundColor: Colors.green,
-                      onPressed: () {}),
-                  SizedBox(height: 5.0),
-                  Row(
-                    textDirection: TextDirection.ltr,
+        child: Column(children: [
+          Expanded(
+            child: Center(
+              child: SingleChildScrollView(
+                child: Container(
+                  width: targetWidth,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      FlatButton.icon(
-                        onPressed: () {},
-                        label: Text(
-                          "Forgot your passwor?",
-                          style: TextStyle(
-                              // fontWeight: FontWeight.w200,
-                              fontSize: 16,
-                              color: Colors.white),
-                        ),
-                        icon: Icon(
-                          Icons.help_outline,
-                          color: Colors.white,
-                          size: 36,
+                      SizedBox(
+                        height: 155.0,
+                        child: Image.asset(
+                          "assets/images/storicam_logo@2x.png",
+                          fit: BoxFit.contain,
                         ),
                       ),
+                      SizedBox(height: 30.0),
+                      Text(
+                        'LOGIN',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 55.0,
+                            color: Colors.white),
+                      ),
+                      SizedBox(height: 20.0),
+                      _buildEmailTextField(),
+                      SizedBox(height: 10.0),
+                      _buildPasswordTextField(),
+                      SizedBox(height: 15.0),
+                      StoriIconButton(
+                          text: "LOAD EXPERIENCE",
+                          icon: Icons.exit_to_app,
+                          backgroundColor: Colors.green,
+                          onPressed: () {}),
+                      SizedBox(height: 5.0),
+                      Row(
+                        textDirection: TextDirection.ltr,
+                        children: <Widget>[
+                          FlatButton.icon(
+                            onPressed: () {},
+                            label: Text(
+                              "Forgot your passwor?",
+                              style: TextStyle(
+                                  // fontWeight: FontWeight.w200,
+                                  fontSize: 16,
+                                  color: Colors.white),
+                            ),
+                            icon: Icon(
+                              Icons.help_outline,
+                              color: Colors.white,
+                              size: 36,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 20.0),
+                      Divider(
+                        color: Colors.white,
+                        height: 1,
+                      ),
+                      SizedBox(height: 50.0),
+                      SizedBox(
+                        height: 45.0,
+                        child: Text(
+                          'New to Stori?',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 28,
+                              color: Colors.white),
+                        ),
+                      ),
+                      SizedBox(height: 15.0),
+                      StoriIconButton(
+                          text: "SIGN UP NOW",
+                          icon: Icons.exit_to_app,
+                          backgroundColor: Colors.blueAccent,
+                          onPressed: () {}),
+                      SizedBox(height: 15.0),
+                      StoriIconButton(
+                          text: "GETTING STARTED",
+                          icon: Icons.description,
+                          backgroundColor: Colors.orange,
+                          onPressed: () {}),
                     ],
                   ),
-                  SizedBox(height: 20.0),
-                  Divider(
-                    color: Colors.white,
-                    height: 1,
-                  ),
-                  SizedBox(height: 50.0),
-                  SizedBox(
-                    height: 45.0,
-                    child: Text(
-                      'New to Stori?',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 28,
-                          color: Colors.white),
-                    ),
-                  ),
-                  SizedBox(height: 15.0),
-                  StoriIconButton(
-                      text: "SIGN UP NOW",
-                      icon: Icons.exit_to_app,
-                      backgroundColor: Colors.blueAccent,
-                      onPressed: () {}),
-                  SizedBox(height: 15.0),
-                  StoriIconButton(
-                      text: "GETTING STARTED",
-                      icon: Icons.description,
-                      backgroundColor: Colors.orange,
-                      onPressed: () {}),
-                  SizedBox(height: 55.0),
-                   new Positioned(
-                    //constraints.biggest.height to get the height 
-                    // * .05 to put the position top: 5%
-                    bottom: 10.0,
-                    // left: constraints.biggest.width * .30,
-                    child: new Container(
-                              width: 100.0,
-                              height: 80.0,
-                              decoration: new BoxDecoration(color: Colors.red),
-                              child: new Text('hello'),
-                          ),
-                    ),
-                  Text(
-                    "VERSION 1.6.8",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
-                  ),
-                ],
+                ),
               ),
             ),
           ),
-        ),
+          Container(
+            height: 20.0,
+            // alignment: FractionalOffset(0.5, 0.5),
+            child: Text(
+              "VERSION 1.6.8",
+              style: TextStyle(fontSize: 16, color: Colors.white),
+            ),
+          ),
+        ]),
       ),
     );
   }
