@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'ui/home_page.dart';
 import 'ui/action_page.dart';
+import 'ui/experience_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: HomePage(),
-      home: ActionPage(),
+      // home: ActionPage(),
+      home: ExperiencePage(),
     );
   }
 }

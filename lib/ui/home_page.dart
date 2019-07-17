@@ -32,7 +32,8 @@ class _HomePageState extends State<HomePage> {
         fontSize: 20.0,
       ),
       decoration: InputDecoration(
-        labelText: 'E-Mail',
+        labelText: 'USER',
+        labelStyle: TextStyle(fontSize: 20.0, color: Colors.white),
         filled: true,
         fillColor: Color.fromRGBO(255, 255, 255, 0.25),
         hintText: 'USER',
@@ -61,7 +62,8 @@ class _HomePageState extends State<HomePage> {
   Widget _buildPasswordTextField() {
     return TextFormField(
       decoration: InputDecoration(
-        labelText: 'Password',
+        labelText: 'PASSWORD',
+        labelStyle: TextStyle(fontSize: 20.0, color: Colors.white),
         filled: true,
         fillColor: Color.fromRGBO(255, 255, 255, 0.25),
         suffixIcon: Icon(

@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 
 @immutable
-class StoriActionButton extends StatelessWidget {
-
+class StoriMenuButton extends StatelessWidget {
   /// `mini` tag is used to switch from a full-width signin button to
   final bool mini;
+
+  final IconData icon;
 
   /// the button's text
   final String text;
 
-  /// backgroundColor is required but textColor is default to `Colors.white`
+  /// color is required but textColor is default to `Colors.white`
   /// splashColor is defalt to `Colors.white30`
-  final Color textColor, backgroundColor, splashColor;
+  final Color textColor, color, splashColor;
 
   /// onPressed should be specified as a required field to indicate the callback.
   final Function onPressed;
@@ -30,22 +31,23 @@ class StoriActionButton extends StatelessWidget {
   /// width is default to be 1/1.5 of the screen
   final double width, height, fontSize;
 
-  StoriActionButton({
+  StoriMenuButton({
     Key key,
     @required this.onPressed,
     @required this.text,
+    @required this.icon,
     this.textColor = Colors.white,
-    this.backgroundColor = Colors.lightBlueAccent,
+    this.color = Colors.lightBlueAccent,
     this.splashColor = Colors.white30,
     this.padding = const EdgeInsets.all(3.0),
     this.mini = false,
     this.elevation = 2.0,
-    this.width = 400,
-    this.height = 110,
-    this.fontSize = 62,
+    this.width = 250,
+    this.height = 220,
+    this.fontSize = 30,
   })  : assert(text != null),
         assert(textColor != null),
-        assert(backgroundColor != null),
+        assert(color != null),
         assert(onPressed != null),
         assert(mini != null),
         assert(elevation != null);
@@ -57,21 +59,27 @@ class StoriActionButton extends StatelessWidget {
         height: height,
         margin: EdgeInsets.all(10),
         child: RawMaterialButton(
-          fillColor: backgroundColor,
+          fillColor: color,
           splashColor: splashColor,
           textStyle: TextStyle(color: textColor),
-          child: Row(
+          shape: new RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(10.0)),
+          child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              Icon(icon, color: textColor, size: 90),
+              SizedBox(height: 10),
               Text(
                 text,
+                textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontFamily: 'Bebas',
-                    // fontWeight: FontWeight.w700,
-                    fontSize: fontSize,
-                    color: textColor),
+                  fontFamily: 'Proxima',
+                  fontWeight: FontWeight.w700,
+                  fontSize: fontSize,
+                  color: textColor,
+                ),
               ),
             ],
           ),

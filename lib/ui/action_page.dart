@@ -47,7 +47,7 @@ class _ActionPageState extends State<ActionPage> {
             ),
             SingleChildScrollView(
               child: Container(
-                margin: EdgeInsets.only(bottom: 120.0),
+                margin: EdgeInsets.only(bottom: 230.0),
                 padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -58,8 +58,9 @@ class _ActionPageState extends State<ActionPage> {
                       child: Text(
                         'TAP TO START',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 55.0,
+                            fontFamily: 'Proxima',
+                            fontWeight: FontWeight.w700,
+                            fontSize: 60.0,
                             color: Colors.white),
                       ),
                     ),
@@ -83,6 +84,7 @@ class _ActionPageState extends State<ActionPage> {
                           text: 'SHOUTOUT',
                           onPressed: () {},
                         ),
+                        
                       ],
                     )
                   ],
@@ -103,10 +105,10 @@ class _ActionPageState extends State<ActionPage> {
                   SizedBox(height: 10.0),
                   Container(
                     width: double.infinity,
-                    height: 38.0,
-                    padding: EdgeInsets.all(5.0),
+                    height: 50.0,
+                    padding: EdgeInsets.all(8.0),
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(0, 0, 0, 0.4),
+                      color: Color.fromRGBO(0, 0, 0, 0.5),
                     ),
                     child: Image.asset(
                       "assets/images/powerby-halocam@2x.png",

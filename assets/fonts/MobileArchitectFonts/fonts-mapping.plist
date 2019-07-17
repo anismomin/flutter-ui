@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>airplaneregular</key>
+	<string>Airplane</string>
+	
+        
+    <key>bdp_birgularegular</key>
+	<string>BDPBirgula</string>
+	
+    
+    <key>cabinsketchbold</key>
+	<string>CabinSketch-Bold</string>
+	
+    
+    <key>HelveticaNeue-HeavyExt</key>
+	<string>HelveticaNeue-HeavyExt</string>
+	
+    
+    <key>HelveticaNeueLTStd-Ex</key>
+	<string>HelveticaNeueLTStd-Ex</string>
+	
+    
+    <key>HelveticaNeueLTStd-ThEx</key>
+	<string>HelveticaNeueLTStd-ThEx</string>
+
+    
+    <key>HelveticaNeueLTStd-UltLtEx</key>
+	<string>HelveticaNeueLTStd-UltLtEx</string>
+	
+    
+    <key>chunkfiveregular</key>
+	<string>ChunkFive</string>
+	
+    
+    <key>colaboratelightregular</key>
+	<string>Colaborate-Light</string>
+	
+    
+    <key>colaborate-regularregular</key>
+	<string>Colaborate-Regular</string>
+        
+    
+    <key>colaborate-thinregular</key>
+	<string>Colaborate-Thin</string>
+	
+    
+    <key>dancing_scriptregular</key>
+	<string>DancingScript</string>
+	
+    
+    <key>duke_fillfill</key>
+	<string>Duke-Fill</string>
+        
+    <key>franchiseregular</key>
+	<string>Franchise-Bold</string>
+    
+    <key>haymakerregular</key>
+	<string>Haymaker</string>
+    
+    <key>homestead_inlineinline</key>
+	<string>Homestead-Inline</string>
+    
+    <key>homestead_regularregular</key>
+	<string>Homestead-Regular</string>
+    
+    
+        
+    <key>kaushan_scriptregular</key>
+	<string>KaushanScript-Regular</string>
+    
+    <key>lavanderia_sturdysturdy</key>
+	<string>Lavanderia-Sturdy</string>
+    
+    <key>neuton_cursiveregular</key>
+	<string>NeutonCursive-Regular</string>
+    
+    <key>neutonextrabold</key>
+	<string>Neuton-Extrabold</string>
+    
+    <key>neutonregular</key>
+	<string>Neuton-Regular</string>
+    
+    
+    <key>onrampregular</key>
+	<string>ONRAMP</string>
+    
+    <key>osp-dindin</key>
+	<string>OSP-DIN</string>
+    
+    <key>outageregular</key>
+	<string>Outage-Regular</string>
+    
+    <key>quicksandbold</key>
+	<string>QuicksandBold-Regular</string>
+    
+    <key>quicksanddash</key>
+	<string>QuicksandDash-Regular</string>
+    
+    
+    <key>rbno2_lightregular</key>
+	<string>RBNo2-Light</string>
+    
+    <key>sansationbold</key>
+	<string>SansationBold</string>
+    
+    <key>sansationbold_italic</key>
+	<string>SansationBoldItalic</string>
+    
+    <key>sansation_lightlight</key>
+	<string>SansationRegular</string>
+    
+    <key>sansationregular</key>
+	<string>SansationRegular</string>
+    
+    
+    <key>snicklesregular</key>
+	<string>Snickles</string>
+    
+    <key>titilliumtext22l_ththin</key>
+	<string>TitilliumText22L-Thin</string>
+    
+    <key>titilliumtext22l_rgregular</key>
+	<string>TitilliumText22L-Regular</string>
+    
+    <key>titilliumtext22l_rgbold</key>
+	<string>TitilliumText22L-Bold</string>
+    
+    <key>veveyregular</key>
+	<string>Untitled</string>
+
+    <key>Arial</key>
+	<string>Arial</string>
+
+    <key>Verdana</key>
+	<string>Verdana</string>
+
+    <key>Helvetica</key>
+	<string>Helvetica</string>
+
+    <key>Times New Roman</key>
+	<string>Times New Roman</string>
+
+    <key>Courier</key>
+	<string>Courier</string>
+
+    <key>Georgia</key>
+	<string>Georgia</string>
+    
+</dict>
+</plist>
