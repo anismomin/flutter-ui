@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'widgets/stori_experience_button.dart';
 import 'widgets/stori_menu_button.dart';
+import 'package:global_configuration/global_configuration.dart';
 
 class ExperiencePage extends StatefulWidget {
   ExperiencePage({Key key, this.title}) : super(key: key);
-
+  
   final String title;
-
+  
   @override
   _ExperiencePageState createState() => _ExperiencePageState();
 }
@@ -15,12 +16,13 @@ class ExperiencePage extends StatefulWidget {
 class _ExperiencePageState extends State<ExperiencePage> {
   @override
   Widget build(BuildContext context) {
+    print(GlobalConfiguration().getString("key1"));
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
           gradient: RadialGradient(
               stops: [0.1, 0.9],
-              colors: [Color(0xFF3a4256), Color(0xFF282b3a)]),
+              colors: [Color(0xFF414d62), Color(0xFF333a4f)]),
         ),
         child: Column(
           children: [
@@ -58,7 +60,7 @@ class _ExperiencePageState extends State<ExperiencePage> {
                     style: TextStyle(
                         fontFamily: 'Bebas',
                         // fontWeight: FontWeight.w700,
-                        fontSize: 60.0,
+                        fontSize: 65.0,
                         color: Colors.white),
                   ),
                   SizedBox(height: 20),
@@ -70,13 +72,13 @@ class _ExperiencePageState extends State<ExperiencePage> {
                         fontSize: 26.0,
                         color: Colors.white),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 40),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      StoriExperienceButton(),
-                      StoriExperienceButton(),
-                      StoriExperienceButton(),
+                      StoriExperienceButton(onPressed : () {}, icon : Icons.party_mode, text: 'PHOTO SELFIE', color: Color(0xFF33ff00), isSelected: true),
+                      StoriExperienceButton(onPressed : () {}, icon : Icons.videocam, text: 'VIDEO SHOUTOUT', color: Color(0xFF33ff00)),
+                      StoriExperienceButton(onPressed : () {}, icon : Icons.all_inclusive, text: 'BOOMARANG', color: Color(0xFF33ff00)),
                     ],
                   ),
                   SizedBox(height: 80),
