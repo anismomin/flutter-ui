@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'ui/home_page.dart';
 import 'ui/action_page.dart';
+import 'ui/decision_page.dart';
 import 'ui/experience_page.dart';
 import 'package:global_configuration/global_configuration.dart';
 import 'package:storicam/config/app_settings.config.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: HomePage(),
       // home: ActionPage(),
-      home: ExperiencePage(),
+      // home: ExperiencePage(),
+      home: DecisionPage(),
     );
   }
 }
