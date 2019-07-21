@@ -30,7 +30,7 @@ class _DecisionPageState extends State<DecisionPage> {
       fit: BoxFit.cover,
       // colorFilter:
       //     ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstATop),
-      image: AssetImage('assets/images/defaultBg@2x.jpg'),
+      image: AssetImage('assets/images/preview_images.jpg'),
     );
   }
 
@@ -50,7 +50,7 @@ class _DecisionPageState extends State<DecisionPage> {
               alignment: Alignment(0.8, 0.0),
               height: 60,
               margin: EdgeInsets.only(top: 10),
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -69,14 +69,13 @@ class _DecisionPageState extends State<DecisionPage> {
             Expanded(
               child: Container(
                 alignment: Alignment.bottomCenter,
-                margin: EdgeInsets.all(40),
+                margin: EdgeInsets.symmetric(horizontal: 60, vertical: 20),
                 decoration: BoxDecoration(
                   image: _buildPreviewImage(),
-                  border: Border.all(width: 1.5, color: Colors.white),
+                  // border: Border.all(width: 1.5, color: Colors.white),
                 ),
                 child: SingleChildScrollView(
                   child: Container(
-                   
                     padding:
                         EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                     child: Column(

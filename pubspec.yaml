@@ -51,6 +51,7 @@ flutter:
    - assets/images/logoText@2x.png
    - assets/images/powerby-halocam.png
    - assets/images/powerby-halocam@2x.png
+   - assets/images/preview_images.jpg
    
 
   # An image asset can refer to one or more resolution-specific "variants", see
