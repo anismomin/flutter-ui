@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/rendering.dart';
-// import 'ui/home_page.dart';
-// import 'ui/action_page.dart';
-import 'ui/decision_page.dart';
-// import 'ui/experience_page.dart';
+import 'package:flutter/rendering.dart';
+import 'ui/home_page.dart';
+import 'ui/action_page.dart';
+import 'ui/preview_page.dart';
+import 'ui/experience_page.dart';
+import 'ui/unlock_page.dart';
 import 'package:global_configuration/global_configuration.dart';
 import 'package:storicam/config/app_settings.config.dart';
 
@@ -24,10 +25,18 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      home: UnlockPage(),
       // home: HomePage(),
-      // home: ActionPage(),
       // home: ExperiencePage(),
-      home: DecisionPage(),
+      // home: ActionPage(),
+      // home: PreviewPage(),
+      // routes: {
+      //     '/': (BuildContext context) =>  HomePage(),
+      //     '/experience': (BuildContext context) =>  ExperiencePage(),
+      //     '/action': (BuildContext context) =>  ActionPage(),
+      //     '/preview': (BuildContext context) =>  PreviewPage(),
+      //     '/unlock': (BuildContext context) =>  UnlockPage(),
+      // },
     );
   }
 }

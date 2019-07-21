@@ -3,16 +3,16 @@ import 'package:flutter/painting.dart';
 import 'widgets/stori_decision_button.dart';
 import 'widgets/stori_counter.dart';
 
-class DecisionPage extends StatefulWidget {
-  DecisionPage({Key key, this.title}) : super(key: key);
+class PreviewPage extends StatefulWidget {
+  PreviewPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _DecisionPageState createState() => _DecisionPageState();
+  _PreviewPageState createState() => _PreviewPageState();
 }
 
-class _DecisionPageState extends State<DecisionPage> {
+class _PreviewPageState extends State<PreviewPage> {
   bool _value1 = true;
   void _value1Changed(bool value) => setState(() => _value1 = value);
 

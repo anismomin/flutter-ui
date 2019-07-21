@@ -34,14 +34,16 @@ class _ActionPageState extends State<ActionPage> {
           children: [
             Expanded(
               child: Container(
-                alignment: Alignment(0.8, 0.0),
+                alignment: Alignment(0.9, -0.9),
                 child: IconButton(
                   icon: Icon(
                     Icons.menu,
                     color: Color.fromRGBO(0, 0, 0, 1),
                     size: 60,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, '/unlock');
+                  },
                 ),
               ),
             ),
@@ -69,11 +71,15 @@ class _ActionPageState extends State<ActionPage> {
                       children: <Widget>[
                         StoriActionButton(
                           text: 'PHOTO',
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushReplacementNamed(context, '/preview');
+                          },
                         ),
                         StoriActionButton(
                           text: 'BOOMERANG',
-                          onPressed: () {},
+                          onPressed: () {
+                             Navigator.pushReplacementNamed(context, '/preview');
+                          },
                         ),
                       ],
                     ),
@@ -82,7 +88,9 @@ class _ActionPageState extends State<ActionPage> {
                       children: <Widget>[
                         StoriActionButton(
                           text: 'SHOUTOUT',
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushReplacementNamed(context, '/preview');
+                          },
                         ),
                         
                       ],

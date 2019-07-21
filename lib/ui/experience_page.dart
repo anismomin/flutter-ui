@@ -76,9 +76,15 @@ class _ExperiencePageState extends State<ExperiencePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      StoriExperienceButton(onPressed : () {}, icon : Icons.party_mode, text: 'PHOTO SELFIE', color: Color(0xFF33ff00), isSelected: true),
-                      StoriExperienceButton(onPressed : () {}, icon : Icons.videocam, text: 'VIDEO SHOUTOUT', color: Color(0xFF33ff00)),
-                      StoriExperienceButton(onPressed : () {}, icon : Icons.all_inclusive, text: 'BOOMARANG', color: Color(0xFF33ff00)),
+                      StoriExperienceButton(onPressed : () {
+                        Navigator.pushReplacementNamed(context, '/preview');
+                      }, icon : Icons.party_mode, text: 'PHOTO SELFIE', color: Color(0xFF33ff00), isSelected: true),
+                      StoriExperienceButton(onPressed : () {
+                        Navigator.pushReplacementNamed(context, '/preview');
+                      }, icon : Icons.videocam, text: 'VIDEO SHOUTOUT', color: Color(0xFF33ff00)),
+                      StoriExperienceButton(onPressed : () {
+                        Navigator.pushReplacementNamed(context, '/preview');
+                      }, icon : Icons.all_inclusive, text: 'BOOMARANG', color: Color(0xFF33ff00)),
                     ],
                   ),
                   SizedBox(height: 80),
@@ -110,7 +116,9 @@ class _ExperiencePageState extends State<ExperiencePage> {
                         text: "LOGOUT",
                         icon: Icons.power_settings_new,
                         color: Colors.red,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(context, '/');
+                        },
                       ),
                     ],
                   ),

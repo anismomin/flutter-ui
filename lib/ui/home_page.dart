@@ -130,7 +130,9 @@ class _HomePageState extends State<HomePage> {
                           text: "LOAD EXPERIENCE",
                           icon: Icons.exit_to_app,
                           backgroundColor: Colors.green,
-                          onPressed: () {}),
+                          onPressed: () {
+                            Navigator.pushReplacementNamed(context, '/action');
+                          }),
                       SizedBox(height: 5.0),
                       Row(
                         textDirection: TextDirection.ltr,
