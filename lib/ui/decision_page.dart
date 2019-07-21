@@ -25,6 +25,15 @@ class _DecisionPageState extends State<DecisionPage> {
     );
   }
 
+  DecorationImage _buildPreviewImage() {
+    return DecorationImage(
+      fit: BoxFit.cover,
+      // colorFilter:
+      //     ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstATop),
+      image: AssetImage('assets/images/defaultBg@2x.jpg'),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // final double deviceWidth = MediaQuery.of(context).size.width;
@@ -60,15 +69,14 @@ class _DecisionPageState extends State<DecisionPage> {
             Expanded(
               child: Container(
                 alignment: Alignment.bottomCenter,
-                // decoration: new BoxDecoration(
-                //   image: new DecorationImage(
-                //     image: new AssetImage("assets/images/IMG_5158.PNG"),
-                //     fit: BoxFit.fill,
-                //   ),
-                // ),
+                margin: EdgeInsets.all(40),
+                decoration: BoxDecoration(
+                  image: _buildPreviewImage(),
+                  border: Border.all(width: 1.5, color: Colors.white),
+                ),
                 child: SingleChildScrollView(
                   child: Container(
-                    margin: EdgeInsets.only(bottom: 230.0),
+                   
                     padding:
                         EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                     child: Column(
@@ -117,20 +125,25 @@ class _DecisionPageState extends State<DecisionPage> {
                               Container(
                                 margin: EdgeInsets.only(right: 10),
                                 decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.green),
+                                  // shape: BoxShape.circle,
+                                  borderRadius: BorderRadius.all(
+                                      Radius.circular(
+                                          5.0) //                 <--- border radius here
+                                      ),
+                                  color: Colors.white,
+                                ),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
+                                  padding: const EdgeInsets.all(2.0),
                                   child: _value1
                                       ? Icon(
                                           Icons.check,
-                                          size: 20.0,
-                                          color: Colors.white,
+                                          size: 22.0,
+                                          color: Colors.green,
                                         )
                                       : Icon(
                                           Icons.check_box_outline_blank,
-                                          size: 20.0,
-                                          color: Colors.blue,
+                                          size: 22.0,
+                                          color: Colors.white,
                                         ),
                                 ),
                               ),
