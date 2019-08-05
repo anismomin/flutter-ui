@@ -16,6 +16,14 @@ class ExperiencePage extends StatefulWidget {
 class _ExperiencePageState extends State<ExperiencePage> {
   @override
   Widget build(BuildContext context) {
+
+    double width = MediaQuery.of(context).size.width;
+    double buttonWidth = width * 0.22;
+    double sectionSpacing = width * 0.03;
+    double buttonHeight = buttonWidth * 1.2;
+    double mainFontSize = buttonHeight * 0.22;
+    double subFontSize = buttonHeight * 0.1;
+
     print(GlobalConfiguration().getString("key1"));
     return Scaffold(
       body: Container(
@@ -54,13 +62,13 @@ class _ExperiencePageState extends State<ExperiencePage> {
             Expanded(
               child: Column(
                 children: <Widget>[
-                  SizedBox(height: 60),
+                  SizedBox(height: sectionSpacing),
                   Text(
                     'CHOOSE    EXPERIENCE',
                     style: TextStyle(
                         fontFamily: 'Bebas',
                         // fontWeight: FontWeight.w700,
-                        fontSize: 65.0,
+                        fontSize: mainFontSize,
                         color: Colors.white),
                   ),
                   SizedBox(height: 20),
@@ -69,7 +77,7 @@ class _ExperiencePageState extends State<ExperiencePage> {
                     style: TextStyle(
                         // fontFamily: 'Bebas',
                         // fontWeight: FontWeight.w700,
-                        fontSize: 26.0,
+                        fontSize: subFontSize,
                         color: Colors.white),
                   ),
                   SizedBox(height: 40),
@@ -87,13 +95,13 @@ class _ExperiencePageState extends State<ExperiencePage> {
                       }, icon : Icons.all_inclusive, text: 'BOOMARANG', color: Color(0xFF33ff00)),
                     ],
                   ),
-                  SizedBox(height: 80),
+                  SizedBox(height: sectionSpacing),
                   Text(
                     'MENU',
                     style: TextStyle(
                         fontFamily: 'Bebas',
                         // fontWeight: FontWeight.w700,
-                        fontSize: 60.0,
+                        fontSize: mainFontSize,
                         color: Colors.white),
                   ),
                   SizedBox(height: 40),

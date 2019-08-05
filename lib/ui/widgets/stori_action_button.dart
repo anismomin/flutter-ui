@@ -52,9 +52,15 @@ class StoriActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    double width = MediaQuery.of(context).size.width;
+    double buttonWidth = width * 0.40;
+    double buttonHeight = buttonWidth * 0.30;
+    double mainFontSize = buttonHeight * 0.50;
+
     return Container(
-        width: width,
-        height: height,
+        width: buttonWidth,
+        height: buttonHeight,
         margin: EdgeInsets.all(10),
         child: RawMaterialButton(
           fillColor: backgroundColor,
@@ -70,7 +76,7 @@ class StoriActionButton extends StatelessWidget {
                 style: TextStyle(
                     fontFamily: 'Bebas',
                     // fontWeight: FontWeight.w700,
-                    fontSize: fontSize,
+                    fontSize: mainFontSize,
                     color: textColor),
               ),
             ],

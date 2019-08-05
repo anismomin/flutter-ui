@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'widgets/stori_decision_button.dart';
 import 'widgets/stori_counter.dart';
+import 'dart:ui';
 
 class UnlockPage extends StatefulWidget {
   UnlockPage({Key key, this.title}) : super(key: key);
@@ -38,6 +39,8 @@ class _UnlockPageState extends State<UnlockPage> {
   Widget build(BuildContext context) {
     // final double deviceWidth = MediaQuery.of(context).size.width;
     // final double targetWidth = deviceWidth > 550.0 ? 420.0 : deviceWidth * 0.95;
+    double width = MediaQuery.of(context).size.width;
+    double headingFontSize = width * 0.055;
 
     return Scaffold(
       body: Container(
@@ -86,10 +89,23 @@ class _UnlockPageState extends State<UnlockPage> {
                           margin: EdgeInsets.only(bottom: 20.0),
                           child: Text(
                             'WHAT DO YOU THINK?',
+                            textAlign: TextAlign.center,
                             style: TextStyle(
+                                shadows: <Shadow>[
+                                  Shadow(
+                                    offset: Offset(2.0, 2.0),
+                                    blurRadius: 3.0,
+                                    color: Color.fromARGB(255, 0, 0, 0),
+                                  ),
+                                  // Shadow(
+                                  //   offset: Offset(2.0, 2.0),
+                                  //   blurRadius: 8.0,
+                                  //   color: Color.fromARGB(125, 0, 0, 255),
+                                  // ),
+                                ],
                                 fontFamily: 'Proxima',
                                 fontWeight: FontWeight.w700,
-                                fontSize: 60.0,
+                                fontSize: headingFontSize,
                                 color: Colors.white),
                           ),
                         ),

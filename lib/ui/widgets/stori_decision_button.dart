@@ -57,10 +57,21 @@ class StoriDecisionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double buttonWidth = width * 0.36;
+    double buttonHeight = buttonWidth * 0.40;
+    double iconSize = buttonHeight * 0.60;
+    double iconSpacing = buttonHeight * 0.1;
+    double buttonPadding = buttonHeight * 0.1;
+    double mainFontSize = buttonHeight * 0.25;
+    double subFontSize = mainFontSize * 0.50;
+
     return Container(
-        width: width,
-        height: height,
-        margin: EdgeInsets.all(10),
+      width: buttonWidth,
+      height: buttonHeight,
+      margin: EdgeInsets.all(10),
+      child: Padding(
+        padding: EdgeInsets.all(buttonPadding),
         child: RawMaterialButton(
           fillColor: color,
           splashColor: splashColor,
@@ -72,8 +83,8 @@ class StoriDecisionButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Icon(icon, color: textColor, size: 70),
-              SizedBox(width: 20),
+              Icon(icon, color: textColor, size: iconSize),
+              SizedBox(width: iconSpacing),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -84,7 +95,7 @@ class StoriDecisionButton extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: 'Proxima',
                       fontWeight: FontWeight.w700,
-                      fontSize: fontSize,
+                      fontSize: mainFontSize,
                       color: textColor,
                     ),
                   ),
@@ -104,6 +115,8 @@ class StoriDecisionButton extends StatelessWidget {
             ],
           ),
           onPressed: onPressed,
-        ));
+        ),
+      ),
+    );
   }
 }

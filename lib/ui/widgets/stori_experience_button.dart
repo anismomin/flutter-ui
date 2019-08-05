@@ -61,9 +61,16 @@ class StoriExperienceButton extends StatelessWidget {
     final Color widgetColor = isSelected ? Color(0xFF33ff00) : Color(0xFF6c7c91);
     final Color textColor = isSelected ? Colors.white : Color(0xFF434d65);
     
+    double width = MediaQuery.of(context).size.width;
+    double buttonWidth = width * 0.22;
+    double buttonHeight = buttonWidth * 1.15;
+    double iconSize = buttonWidth * 0.60;
+    double iconSpacing = buttonHeight * 0.1;
+    double mainFontSize = buttonHeight * 0.08;
+
     return Container(
-        width: width,
-        height: height,
+        width: buttonWidth,
+        height: buttonHeight,
         margin: EdgeInsets.all(10),
         child: RawMaterialButton(
           fillColor: widgetColor,
@@ -96,15 +103,15 @@ class StoriExperienceButton extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    Icon(icon, color: textColor, size: 130),
-                    SizedBox(height: 30),
+                    Icon(icon, color: textColor, size: iconSize),
+                    SizedBox(height: iconSpacing),
                     Text(
                       text,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: 'Proxima',
                         fontWeight: FontWeight.w700,
-                        fontSize: fontSize,
+                        fontSize: mainFontSize,
                         color: textColor,
                       ),
                     ),

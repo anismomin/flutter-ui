@@ -54,9 +54,17 @@ class StoriMenuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    double width = MediaQuery.of(context).size.width;
+    double buttonWidth = width * 0.20;
+    double buttonHeight = buttonWidth * 1;
+    double iconSize = buttonWidth * 0.40;
+    double iconSpacing = buttonHeight * 0.1;
+    double mainFontSize = buttonHeight * 0.1;
+
     return Container(
-        width: width,
-        height: height,
+        width: buttonWidth,
+        height: buttonHeight,
         margin: EdgeInsets.all(10),
         child: RawMaterialButton(
           fillColor: color,
@@ -69,7 +77,7 @@ class StoriMenuButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Icon(icon, color: textColor, size: 90),
+              Icon(icon, color: textColor, size: iconSize),
               SizedBox(height: 10),
               Text(
                 text,
@@ -77,7 +85,7 @@ class StoriMenuButton extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Proxima',
                   fontWeight: FontWeight.w700,
-                  fontSize: fontSize,
+                  fontSize: mainFontSize,
                   color: textColor,
                 ),
               ),

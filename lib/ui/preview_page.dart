@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'widgets/stori_decision_button.dart';
 import 'widgets/stori_counter.dart';
+import 'dart:ui';
 
 class PreviewPage extends StatefulWidget {
   PreviewPage({Key key, this.title}) : super(key: key);
@@ -38,6 +39,9 @@ class _PreviewPageState extends State<PreviewPage> {
   Widget build(BuildContext context) {
     // final double deviceWidth = MediaQuery.of(context).size.width;
     // final double targetWidth = deviceWidth > 550.0 ? 420.0 : deviceWidth * 0.95;
+    double width = MediaQuery.of(context).size.width;
+    double mainFontSize = width * 0.05;
+    
 
     return Scaffold(
       body: Container(
@@ -50,7 +54,7 @@ class _PreviewPageState extends State<PreviewPage> {
               alignment: Alignment(0.8, 0.0),
               height: 60,
               margin: EdgeInsets.only(top: 10),
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(5),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -59,7 +63,7 @@ class _PreviewPageState extends State<PreviewPage> {
                     icon: Icon(
                       Icons.close,
                       color: Colors.white,
-                      size: 60,
+                      size: 50,
                     ),
                     onPressed: () {},
                   ),
@@ -69,7 +73,7 @@ class _PreviewPageState extends State<PreviewPage> {
             Expanded(
               child: Container(
                 alignment: Alignment.bottomCenter,
-                margin: EdgeInsets.symmetric(horizontal: 60, vertical: 20),
+                margin: EdgeInsets.symmetric(horizontal: 35, vertical: 10),
                 decoration: BoxDecoration(
                   image: _buildPreviewImage(),
                   // border: Border.all(width: 1.5, color: Colors.white),
@@ -86,10 +90,23 @@ class _PreviewPageState extends State<PreviewPage> {
                           margin: EdgeInsets.only(bottom: 20.0),
                           child: Text(
                             'WHAT DO YOU THINK?',
+                            textAlign: TextAlign.center,
                             style: TextStyle(
+                              shadows: <Shadow>[
+                                  Shadow(
+                                    offset: Offset(2.0, 2.0),
+                                    blurRadius: 3.0,
+                                    color: Color.fromARGB(255, 0, 0, 0),
+                                  ),
+                                  // Shadow(
+                                  //   offset: Offset(2.0, 2.0),
+                                  //   blurRadius: 8.0,
+                                  //   color: Color.fromARGB(125, 0, 0, 255),
+                                  // ),
+                                ],
                                 fontFamily: 'Proxima',
                                 fontWeight: FontWeight.w700,
-                                fontSize: 60.0,
+                                fontSize: mainFontSize,
                                 color: Colors.white),
                           ),
                         ),

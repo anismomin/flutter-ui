@@ -25,18 +25,18 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: UnlockPage(),
+      // home: UnlockPage(),
       // home: HomePage(),
       // home: ExperiencePage(),
       // home: ActionPage(),
       // home: PreviewPage(),
-      // routes: {
-      //     '/': (BuildContext context) =>  HomePage(),
-      //     '/experience': (BuildContext context) =>  ExperiencePage(),
-      //     '/action': (BuildContext context) =>  ActionPage(),
-      //     '/preview': (BuildContext context) =>  PreviewPage(),
-      //     '/unlock': (BuildContext context) =>  UnlockPage(),
-      // },
+      routes: {
+          '/': (BuildContext context) =>  HomePage(),
+          '/experience': (BuildContext context) =>  ExperiencePage(),
+          '/action': (BuildContext context) =>  ActionPage(),
+          '/preview': (BuildContext context) =>  PreviewPage(),
+          '/unlock': (BuildContext context) =>  UnlockPage(),
+      },
     );
   }
 }

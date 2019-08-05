@@ -24,6 +24,8 @@ class _ActionPageState extends State<ActionPage> {
   Widget build(BuildContext context) {
     // final double deviceWidth = MediaQuery.of(context).size.width;
     // final double targetWidth = deviceWidth > 550.0 ? 420.0 : deviceWidth * 0.95;
+    double width = MediaQuery.of(context).size.width;
+    double mainFontSize = width * 0.07;
 
     return Scaffold(
       body: Container(
@@ -62,7 +64,7 @@ class _ActionPageState extends State<ActionPage> {
                         style: TextStyle(
                             fontFamily: 'Proxima',
                             fontWeight: FontWeight.w700,
-                            fontSize: 60.0,
+                            fontSize: mainFontSize,
                             color: Colors.white),
                       ),
                     ),
