@@ -28,15 +28,15 @@ class MyApp extends StatelessWidget {
       // home: UnlockPage(),
       // home: HomePage(),
       // home: ExperiencePage(),
-      // home: ActionPage(),
+      home: ActionPage(),
       // home: PreviewPage(),
-      routes: {
-          '/': (BuildContext context) =>  HomePage(),
-          '/experience': (BuildContext context) =>  ExperiencePage(),
-          '/action': (BuildContext context) =>  ActionPage(),
-          '/preview': (BuildContext context) =>  PreviewPage(),
-          '/unlock': (BuildContext context) =>  UnlockPage(),
-      },
+      // routes: {
+      //     '/': (BuildContext context) =>  HomePage(),
+      //     '/experience': (BuildContext context) =>  ExperiencePage(),
+      //     '/action': (BuildContext context) =>  ActionPage(),
+      //     '/preview': (BuildContext context) =>  PreviewPage(),
+      //     '/unlock': (BuildContext context) =>  UnlockPage(),
+      // },
     );
   }
 }

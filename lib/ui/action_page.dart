@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets/stori_action_button.dart';
+import 'package:video_player/video_player.dart';
 
 class ActionPage extends StatefulWidget {
   ActionPage({Key key, this.title}) : super(key: key);
@@ -11,6 +12,23 @@ class ActionPage extends StatefulWidget {
 }
 
 class _ActionPageState extends State<ActionPage> {
+  VideoPlayerController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = VideoPlayerController.network(
+        'http://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_20mb.mp4')
+      ..initialize().then((_) {
+        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
+        setState(() {});
+      });
+      _controller.play();
+      _controller.setLooping(true);
+      _controller.setVolume(0.0);
+
+  }
+
   DecorationImage _buildBackgroundImage() {
     return DecorationImage(
       fit: BoxFit.cover,
@@ -80,7 +98,7 @@ class _ActionPageState extends State<ActionPage> {
                         StoriActionButton(
                           text: 'BOOMERANG',
                           onPressed: () {
-                             Navigator.pushReplacementNamed(context, '/preview');
+                            Navigator.pushReplacementNamed(context, '/preview');
                           },
                         ),
                       ],
@@ -94,7 +112,6 @@ class _ActionPageState extends State<ActionPage> {
                             Navigator.pushReplacementNamed(context, '/preview');
                           },
                         ),
-                        
                       ],
                     )
                   ],
