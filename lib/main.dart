@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: UnlockPage(),
       // home: HomePage(),
-      // home: ExperiencePage(),
-      home: ActionPage(),
+      home: ExperiencePage(),
+      // home: ActionPage(),
       // home: PreviewPage(),
       // routes: {
       //     '/': (BuildContext context) =>  HomePage(),
